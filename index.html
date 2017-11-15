@@ -4,71 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue Experiment</title>
-  
-  <style>
-    .is-loading {
-      background: red;
-    }
-  </style>
 </head>
 <body>
   <div id="app">
     <task-list></task-list>
   </div>
-  <!--   <div id="root">
-    <h1>
-      {{ revMessage }}
-    </h1>
-    <button :disabled="statusBtn" @click="toggleBtn">CLICK</button>
-    
-    <h2>All Tasks</h2>
-    <ul>
-      <li v-for="task in tasks" ><input type="checkbox" v-model="task.completed">{{ task.description }}</li>
-    </ul>
-    
-    <h2>Todo:</h2>
-    <ul>
-      <li v-for="task in incompleteTasks" v-text="task.description"></li>
-    </ul>
-    <h2>Completed</h2>
-    <ul>
-      <li v-for="task in completeTasks" v-text="task.description"></li>
-    </ul>
-  </div> -->
   <script src="https://unpkg.com/vue"></script>    
   <script src="main.js"></script>  
-  <script>
-    
-    /*     var root = new Vue({
-      el: '#root',
-      data: {
-        statusBtn: false,
-        message: "Hello World",
-        tasks: [
-        { description: 'Go to the store', completed: true},
-        { description: 'Finish tutorial', completed: false},
-        { description: 'Cook food', completed: false},
-        { description: 'Play games', completed: true},
-        { description: 'Learn JS', completed: false},
-        ]
-      },
-      computed:{
-        revMessage() {
-          return this.message.split('').reverse().join('');
-        },
-        incompleteTasks() {
-          return this.tasks.filter(task => !task.completed);
-        },
-        completeTasks() {
-          return this.tasks.filter(task => task.completed);
-        }
-      },
-      methods: {
-        toggleBtn() {
-          this.status = !this.status
-        }
-      }
-    }) */
-  </script>
 </body>
 </html>
