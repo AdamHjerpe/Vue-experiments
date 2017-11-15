@@ -1,4 +1,3 @@
-//import Room from './app/views/room'
 Vue.component('task-list', {
   template: `
     <ul>
@@ -13,13 +12,13 @@ Vue.component('task-list', {
         { description: 'Cook food', completed: false},
         { description: 'Play games', completed: true},
         { description: 'Learn JS', completed: false},
-        
       ]
     }
   }
 })
+
 Vue.component('task', {
-  template: '<li><slot></slot></li>'
+  template: `<li><slot></slot></li>`
 })
 
 var app = new Vue ({
