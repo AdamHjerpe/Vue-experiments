@@ -1,15 +1,72 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue Experiment</title>
-</head>
-<body>
-  <div id="app">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Experiment</title>
     
-  </div>
-  <script src="https://unpkg.com/vue"></script>    
-  <script src="main.js"></script>  
-</body>
-</html>
+    <style>
+      .is-loading {
+        background: red;
+      }
+    </style>
+    <div id="root">
+    </head>
+      <h1>
+        {{ message }} 
+        :
+        {{ revMessage }}
+      </h1>
+  
+      <button :disabled="statusBtn" @click="toggleBtn">CLICK</button>
+      
+      <h2>All Tasks</h2>
+      <ul>
+        <li v-for="task in tasks" ><input type="checkbox" v-model="task.completed">{{ task.description }}</li>
+      </ul>
+      
+      <h2>Todo:</h2>
+      <ul>
+        <li v-for="task in incompleteTasks" v-text="task.description"></li>
+      </ul>
+      <h2>Completed</h2>
+      <ul>
+        <li v-for="task in completeTasks" v-text="task.description"></li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue"></script>    
+    <script>
+      
+        var root = new Vue({
+        el: '#root',
+        data: {
+          statusBtn: false,
+          message: "Hello World",
+          tasks: [
+          { description: 'Go to the store', completed: true},
+          { description: 'Finish tutorial', completed: false},
+          { description: 'Cook food', completed: false},
+          { description: 'Play games', completed: true},
+          { description: 'Learn JS', completed: false},
+          ]
+        },
+        computed:{
+          revMessage() {
+            return this.message.split('').reverse().join('');
+          },
+          incompleteTasks() {
+            return this.tasks.filter(task => !task.completed);
+          },
+          completeTasks() {
+            return this.tasks.filter(task => task.completed);
+          }
+        },
+        methods: {
+          toggleBtn() {
+            this.statusBtn = !this.statusBtn
+          }
+        }
+      }) 
+    </script>
+  </body>
+  </html>
