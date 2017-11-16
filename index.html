@@ -4,10 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue Experiment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
 </head>
 <body>
   <div id="app">
-    
+    <modal  v-if="showModal" @close="showModal = false">
+      <p>Modal Text</p>
+    </modal>
+    <button @click="showModal = true">Show Modal</button>
   </div>
   <script src="https://unpkg.com/vue"></script>    
   <script src="main.js"></script>  
