@@ -3,13 +3,19 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
-
+    "configurations": [{
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
+            "runtimeExecutable": "C:\\Users\\adam_\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe",
             "webRoot": "${workspaceRoot}"
         },
         {
@@ -17,7 +23,8 @@
             "type": "chrome",
             "request": "launch",
             "sourceMaps": false,
-            "file": "${workspaceRoot}/index.html"
+            "runtimeExecutable": "C:\\Users\\adam_\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe",
+            "file": "${workspaceFolder}/index.html"
         },
     ]
 }

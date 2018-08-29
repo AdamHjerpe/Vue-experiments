@@ -5,6 +5,7 @@ Vue.component('message', {
       isVisible: true
     }
   },
+  
   template: `
   <article class="message" v-show="isVisible">
     <div class="message-header">
@@ -30,6 +31,7 @@ Vue.component('message', {
     }
   }
 })
+
 var app = new Vue ({
   el: '#app'
 })

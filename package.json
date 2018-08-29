@@ -1,0 +1,50 @@
+{
+  "name": "vue-experiments",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://adamhjerpe@github.com/AdamHjerpe/Vue-experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamHjerpe/Vue-experiments/issues"
+  },
+  "homepage": "https://github.com/AdamHjerpe/Vue-experiments#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "vue-eslint-parser": "^3.2.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "parser": "vue-eslint-parser",
+    "extends": "plugin:vue/essential",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-const-assign": "warn",
+      "no-this-before-super": "warn",
+      "no-undef": "warn",
+      "vue/no-unused-vars": "warn",
+      "no-unreachable": "warn",
+      "no-unused-vars": "off",
+      "constructor-super": "warn",
+      "valid-typeof": "warn"
+    }
+  }
+}
